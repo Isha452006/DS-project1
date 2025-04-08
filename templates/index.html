@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sales Prediction Model</h1>
+
+        <form method="POST">
+            <label for="TV">TV Advertising Spend (in thousands):</label>
+            <input type="text" name="TV" id="TV" required>
+
+            <label for="Radio">Radio Advertising Spend (in thousands):</label>
+            <input type="text" name="Radio" id="Radio" required>
+
+            <label for="Newspaper">Newspaper Advertising Spend (in thousands):</label>
+            <input type="text" name="Newspaper" id="Newspaper" required>
+
+            <button type="submit">Predict Sales</button>
+        </form>
+
+        {% if prediction %}
+            <p>Predicted Sales: ₹{{ prediction }}</p> <!-- Predicted sales result -->
+        {% endif %}
+    </div>
+</body>
+</html>
