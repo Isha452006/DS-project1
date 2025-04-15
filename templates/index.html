@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Prediction</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Sales Prediction Model</h1>
+    <div class="background-overlay">
+        <div class="container">
+            <img src="images/banner/banner.jpg" alt="Sales Banner" class="banner">
 
-        <form method="POST">
-            <label for="TV">TV Advertising Spend (in thousands):</label>
-            <input type="text" name="TV" id="TV" required>
+            <h1>Sales Prediction Model</h1>
 
-            <label for="Radio">Radio Advertising Spend (in thousands):</label>
-            <input type="text" name="Radio" id="Radio" required>
+            <form method="POST">
+                <label for="TV">TV Advertising Spend (in thousands):</label>
+                <input type="text" name="TV" id="TV" required>
 
-            <label for="Newspaper">Newspaper Advertising Spend (in thousands):</label>
-            <input type="text" name="Newspaper" id="Newspaper" required>
+                <label for="Radio">Radio Advertising Spend (in thousands):</label>
+                <input type="text" name="Radio" id="Radio" required>
 
-            <button type="submit">Predict Sales</button>
-        </form>
+                <label for="Newspaper">Newspaper Advertising Spend (in thousands):</label>
+                <input type="text" name="Newspaper" id="Newspaper" required>
 
-        {% if prediction %}
-            <p>Predicted Sales: ₹{{ prediction }}</p> <!-- Predicted sales result -->
-        {% endif %}
+                <button type="submit">Predict Sales</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
