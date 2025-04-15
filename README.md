@@ -35,4 +35,36 @@ sales-prediction/ ├── app.py # Main Flask app to run the project
 ├── sales_prediction/ # Folder for storing trained model or utilities 
 ├── templates/ │ └── index.html # Frontend HTML file (used with Flask) └── images/ └── banner.jpg #
 
+## 🚀 Features
+
+- 🧠 Predicts future product sales using machine learning
+- 📊 Generates and loads sample sales datasets
+- 🔍 Preprocessing and data cleaning scripts included
+- 🖥️ Web-based interface using Flask + HTML/CSS
+- 📦 Simple and clean project structure for easy extension
+- 📸 Banner and visual design to improve UI
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML, CSS
+- **Backend**: Python (Flask)
+- **Machine Learning**: scikit-learn
+- **Data Handling**: pandas
+- **Modeling**: pickle (for saving/loading models)
+
+## 💻 How to Use
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/Isha452006/codealpha_salesprediction.git
+   cd codealpha_salesprediction
+2. **Run the app.py**
+   python app.py
+
+   
+
+  
+
+
 
