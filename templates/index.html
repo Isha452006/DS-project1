@@ -25,7 +25,9 @@
                 <input type="text" name="Newspaper" id="Newspaper" required>
 
                 <button type="submit">Predict Sales</button>
-            </form>
+                {% if prediction %}
+                <h3>Predicted Sales: {{ prediction }}</h3>
+            {% endif %}
         </div>
     </div>
 </body>
