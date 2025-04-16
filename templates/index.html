@@ -1,31 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales Prediction</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Prediction</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+
+  <style>
+    body {
+      background-image: url('/static/banner.jpg'); /* You can change this image */
+      background-size: cover;         
+      background-repeat: no-repeat;   
+      background-position: center;    
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6); /* Adjusted background */
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 80px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1, h3 {
+      color: aliceblue;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      color: white; /* Text color for labels */
+    }
+
+    input[type="number"] {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .btn-primary {
+      background-color: #28a745;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #218838;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Sales Prediction Model</h1>
+  <div class="container">
+    <h1 class="text-center mt-5">Sales Prediction Model</h1>
 
-        <form method="POST">
-            <label for="TV">TV Advertising Spend (in thousands):</label>
-            <input type="text" name="TV" id="TV" required>
+    <!-- Form to take input from the user -->
+    <form method="POST" action="/predict" class="mt-4">
+      <div class="form-group">
+        <label for="TV">TV Advertising Spend (in thousands):</label>
+        <input
+          type="number"
+          class="form-control"
+          id="TV"
+          name="TV"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Radio">Radio Advertising Spend (in thousands):</label>
+        <input
+          type="number"
+          class="form-control"
+          id="Radio"
+          name="Radio"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Newspaper">Newspaper Advertising Spend (in thousands):</label>
+        <input
+          type="number"
+          class="form-control"
+          id="Newspaper"
+          name="Newspaper"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
-            <label for="Radio">Radio Advertising Spend (in thousands):</label>
-            <input type="text" name="Radio" id="Radio" required>
-
-            <label for="Newspaper">Newspaper Advertising Spend (in thousands):</label>
-            <input type="text" name="Newspaper" id="Newspaper" required>
-
-            <button type="submit">Predict Sales</button>
-        </form>
-
-        {% if prediction %}
-            <p>Predicted Sales: ₹{{ prediction }}</p> <!-- Predicted sales result -->
-        {% endif %}
-    </div>
+    <!-- Display the prediction result -->
+    <h3 class="mt-4">
+      Predicted Sales: {{ prediction }} (in thousands)
+    </h3>
+  </div>
 </body>
 </html>
