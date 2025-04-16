@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Prediction</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background-overlay">
         <div class="container">
-            <img src="images/banner/banner.jpg" alt="Sales Banner" class="banner">
-
+            <!-- Correct path to the image -->
+        
             <h1>Sales Prediction Model</h1>
 
             <form method="POST">

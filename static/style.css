@@ -1,0 +1,67 @@
+body {
+    background-image: url('/static/banner.jpg'); /* ✅ Flask me absolute path likhna hota hai */
+    background-size: cover;         /* pura background fill kare */
+    background-repeat: no-repeat;   /* image repeat na ho */
+    background-position: center;    /* center me dikhai de */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333366; /* Dark blue */
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.download-btn {
+    background-color: #007bff; /* Blue */
+    margin-bottom: 20px;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
